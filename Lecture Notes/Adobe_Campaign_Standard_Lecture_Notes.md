@@ -11,7 +11,7 @@
         The options available on the ACS interface vary by contract and user permissions.
 
 ### Dashboard View
-![Dashboard_View](.\img\acs_dashboard.jpg)*View of first page upon logging in to Adobe Campaign Standard*
+![Dashboard_View](/img/acs_dashboard.jpg)*View of first page upon logging in to Adobe Campaign Standard*
 
 ### Adobe UI Documentation
 [UI Navigation](https://docs.adobe.com/content/help/en/campaign-standard/using/getting-started/discovering-the-interface/interface-description.html)
