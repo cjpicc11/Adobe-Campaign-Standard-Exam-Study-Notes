@@ -125,3 +125,29 @@ You can create audiences in several ways:
 2. Click on Profiles & Audiences
 3. Click on Audiences
 4. Click on Create
+
+
+## Marketing Campaigns and Programs
+- In ACS, you can use programs and campaigns to plan your marketing campaigns.
+- Programs and campaigns enable you to regroup and view all the different marketing activities linked to them.
+- You can generate reports on programs and campaigns and analyze their impact.
+- As a best practice, Adobe recommends the following hierarchy:
+> Program > Sub-programs > Campaigns > Workflows > Deliveries
+
+### Programs and Campaigns Hierarchy
+
+| Programs can contain: | Campaigns can contain |
+| --- | --- |
+| Other Programs | Deliveries (emails, SMS, push notifications, direct mail) |
+| Campaigns | Workflows | 
+| Workflows | Landing Pages | 
+| Landing Pages | |
+
+### Timeline
+The timeline is a visualization of programs in progress, and their content - for example, campaigns, deliveries, and landing pages.
+- You can access the timeline from the Home page.
+- The timeline displays programs chronologically between their start and end dates
+- A blue vertical line in the timeline highlights the current date.
+- The timeline does not display workflows since they do not have a start and end date.
+
+<!-- Pause at creating programs and campaigns demo -->
