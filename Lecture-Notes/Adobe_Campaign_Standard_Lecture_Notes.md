@@ -127,6 +127,8 @@ You can create audiences in several ways:
 4. Click on Create
 
 
+
+
 ## Marketing Campaigns and Programs
 - In ACS, you can use programs and campaigns to plan your marketing campaigns.
 - Programs and campaigns enable you to regroup and view all the different marketing activities linked to them.
@@ -150,4 +152,56 @@ The timeline is a visualization of programs in progress, and their content - for
 - A blue vertical line in the timeline highlights the current date.
 - The timeline does not display workflows since they do not have a start and end date.
 
-<!-- Pause at creating programs and campaigns demo -->
+### Steps to create a program and campaign(s) within the program
+1. From Dashboard, click on Programs and Campaigns.
+2. Click Create (button in upper right hand corner).
+3. Select the new program, then click Next
+4. Enter Program Details (Label, ID, start date, end date) then click Create
+5. Within the program click Create
+6. Select Campaign
+7. SElect the new campaign type, then click next
+8. Enter Campaign Details  (Label, ID, start date, end date)
+
+## Email Delivery
+
+### Email Types
+- **Single-send Email:**  email sent once to a defined target.
+- **Recurring Email:** email sent multiple times to different targets over a defined period (available only within a workflow)
+- **A/B test email:** email used to test up to three versions of an email.
+- **Transactional message:**  individual and unique email sent once to a customer, triggered by that customer's behavior (for example, a welcome message sent to a customer after creating an account)
+
+### Email Creation Steps
+- **Create Email Delivery**  
+- **Select Type****
+- **Set Properties****
+- **Specify Audience****
+- **Design Content****
+- **Prepare & Send**
+
+>  ***Guided by Email Creation Wizard*
+
+**[Step 1]  You can create Email Deliveries from:**
+- The home page
+- The Marketing Activities page.
+- A Campaign
+- A Workflow (single-send and recurring deliveries)
+
+**[Step 2]  Email Types are email templates:**
+- Templates are provided out of the box
+- You can also create custom templates
+
+**[Step 3]  Set Properties:**
+- Label
+- ID
+- Campaign
+- Description
+
+**[Step :]  Specify Audience:**
+- Define conditions to select the profiles to be targeted.
+- Specify test profiles to use for sending proofs.
+
+**[Step 5] Design Content:**
+- Use the email designer to design the content of your email messages
+- From the Email designer home page, you can:
+        - Create the email content using a variety of methods: from scratch, from a template, from a file or URL.
+        - Set email settings: the sender address and name, and the email subject
