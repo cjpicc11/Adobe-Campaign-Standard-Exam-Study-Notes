@@ -201,7 +201,7 @@ The timeline is a visualization of programs in progress, and their content - for
 - Specify test profiles to use for sending proofs.
 
 **[Step 5] Design Content:**
-- Use the email designer to design the content of your email messages
-- From the Email designer home page, you can:
-        - Create the email content using a variety of methods: from scratch, from a template, from a file or URL.
-        - Set email settings: the sender address and name, and the email subject
+* Use the email designer to design the content of your email messages
+* From the Email designer home page, you can:
+        * Create the email content using a variety of methods: from scratch, from a template, from a file or URL.
+        * Set email settings: the sender address and name, and the email subject
