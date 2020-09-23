@@ -196,12 +196,101 @@ The timeline is a visualization of programs in progress, and their content - for
 - Campaign
 - Description
 
-**[Step :]  Specify Audience:**
+**[Step 4]  Specify Audience:**
 - Define conditions to select the profiles to be targeted.
 - Specify test profiles to use for sending proofs.
 
 **[Step 5] Design Content:**
-* Use the email designer to design the content of your email messages
-* From the Email designer home page, you can:
-        * Create the email content using a variety of methods: from scratch, from a template, from a file or URL.
-        * Set email settings: the sender address and name, and the email subject
+- Use the email designer to design the content of your email messages
+- From the Email designer home page, you can:
+  - Create the email content using a variety of methods: from scratch, from a template, from a file or URL.
+  - Set email settings: the sender address and name, and the email subject
+
+**[Step 6] Prepare & Send:**
+- Configure/edit properties, schedule, audience, and content.
+- Send tests to verify the message.
+- Prepare the delivery
+  - Applies topology rules
+  - Analyzes the target
+  - Inserts personalization
+- Send the delivery
+
+### Steps to Create a Delivery
+1. From the homepage, click on *Create an Email*
+2. Select the *Send via Email* Type.
+3. Enter Email properties (Label, ID, Campaign Selection, Description)
+
+## Email Designer Overview
+The Email designer enables you to smoothly design and edit the content of your emails.  
+
+You can use the Email Designer to design:  
+- Simple Emails
+- Recurring Emails
+- Transactional Emails
+- A/B Test Emails
+- Multilingual Emails
+
+### Editing Views in Email Designer
+- Standard Desktop View
+- Mobile View
+  - Edit style options for mobile display.
+  - Hide components from the mobile display for effective usage of space.
+  - Exception:  inline style settings are applied to both views.
+- Any changes to the structure or content are applied to both views (text edits, changing images, adding new components)
+
+
+### Editing Modes in Email Designer
+- Edit Mode
+  - WYSIWYG interface
+  - Drag and Drop components into the email body.
+- Plan Text Mode:  by default, a plain text version of the email is generated and synchronized with the Edit Version.
+- HTML Mode
+  - For the most advanced users to edit the HTML code.
+  - You can also access the HTML code of a selected component in the Edit mode by choosing Show the source code in the contextual menu.
+
+  ### Email Designer Homepage
+  From the Email Designer Home Page you can:  
+  - Create the email content using a variety of methods.
+  - Edit some email properties, such as the label, the sender's address and name, and the email subject.
+  - Access related documentation and tutorials
+
+  ### Creating Email Content
+  From the home page of the Email Designer, you can create the content of your email.
+  - From scratch (Create)
+  - Using Content from a template (Templates)
+  - By importing content from a file (Uploads)
+  - By importing content from a URL (Import from a URL)
+
+  ### Creating Content from a Template
+  - Current Templates are provided out of the box (for example, customer welcome emails, newsletters, and reengagement emails)
+  - The layouts are optimized for mobile.
+  - The templates are read-only.
+  - You can create custom content templates.
+
+  ### Creating Content from a file
+  - Upload a file from your computer.
+  - Supports:
+    - HTML with an incorporated style sheet.
+    - A .zip folder containing the HTML file, the style sheet (.CSS), and the images.
+
+### Creating Content from a URL
+- Retrieves HTML content from a URL (optionally, you can choose to import the content of each time the email is prepared)
+- The content needs to be publicly available via the URL provided.
+- For security reasons, only HTTPS URLs are supported.
+- Resources (images, CSS) must be referenced using absolute links and in HTTPS.
+- An example of an absolute link in the HTML:  
+` <a href="https://wwww.mywebsite.com/images/myimage.png">`
+
+
+### Creating Content from Scratch
+- To create content from scratch, use the Palette to insert the content into your design using:
+  - Structure components
+  - Content components
+  - Content
+- You can also insert content fragments
+
+### Structure Components
+- Structure components design the shape of your email.
+- You can add multiple structure components to your email.
+- They can contain multiple columns.
+- You can insert pre-defined structure, or design your own custom structure component.
