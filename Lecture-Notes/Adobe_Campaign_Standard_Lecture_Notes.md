@@ -294,3 +294,14 @@ You can use the Email Designer to design:
 - You can add multiple structure components to your email.
 - They can contain multiple columns.
 - You can insert pre-defined structure, or design your own custom structure component.
+
+### Content Components
+- Content Components are empty components that define the type of content to display in the email.
+- You must insert content components to the structure components.
+
+### Content
+- Content is what actually shows in the email design, such as an image file or text.
+- You must define the content displayed in the content component.
+
+
+<!--BREAK AT Creating a Content Fragment-->
