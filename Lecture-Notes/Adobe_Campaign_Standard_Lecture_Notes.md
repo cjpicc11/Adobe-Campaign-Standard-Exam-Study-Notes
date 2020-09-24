@@ -303,5 +303,86 @@ You can use the Email Designer to design:
 - Content is what actually shows in the email design, such as an image file or text.
 - You must define the content displayed in the content component.
 
+### Content Fragment
+- Fragments are reusable components referenced in one or more emails.
+- Create your own custom fragments to:
+  - Increase design consistency of marketing messages.
+  - Reduce design time.
+- Fragments are locked in the email.
+- If you edit a fragment, the changes will be propagated to all emails containing that fragment.
+- You can edit a fragment within a specific delivery by unlocking and breaking the synchronization
+- You cannot insert personalization inside a fragment.
 
-<!--BREAK AT Creating a Content Fragment-->
+### Personalizing Email Content
+Personalization Benefits
+- Increases conversions.
+- Improves Customer Retention
+- Makes Marketing Useful.
+
+### Personalization Methods Available
+You can personalize email content and the display of messages using several methods:
+- Personalization fields
+- Dynamic Content
+- Content Blocks
+
+### Personalization Fields
+- Insert a field from the database into your content.
+- You can insert into the subject or the body of your email message - for example:
+  - Profile's First Name
+  - Profile's Date of birth
+  - Profile's loyalty program level and points
+
+### Dynamic Content
+Define Different content to display dynamically based on a condition - for example:
+- Profiles receive different messages according to their age range
+- Profiles receive different messages according to their city, state, or country
+
+### Dynamic Content:  Order of Priority
+- If the dynamic content contains multiple variants, some profiles may meet multiple conditions
+- Only one email with dynamic content can be sent
+- You can specify the order of priority for each condition
+- The condition with the highest priority will be sent, even if the targeted profile meets other conditions
+
+### Content Blocks
+- Pre-configured content blocks are provided out of the box
+- They are dynamic and personalized-for example:
+  - Greetings
+  - Link to a brand's website
+  - Current Date
+
+### Editing Images with Creative SDK
+- A complete set of features powered by the Adobe Creative SDK is available to enhance images directly in the editor
+- Available tools cannot be customized
+
+### Responsive Email Design Preview
+- Preview the design of your email content using
+  - Desktop View
+  - Responsive mobile view
+- Use a test profile to test a personalization and dynamic content
+
+### Inserting Links into Email Content
+- You can insert links into the elements of the email message.
+- You can insert a link into images, words, a group of words, or a block of text.
+- Link types:
+  - External link
+  - Landing page
+  - Subscription link
+  - Unsubscription link
+- You can also personalize links by inserting personalization fields, content blocks, or dynamic content.
+
+### Tracked URLs
+- Tracking:
+  - Is only available for emails
+  - Is activated by default in the email properties
+  - Can be activated or deactivated for each URL
+- Tracked URLs generate a *Click* when a recipient of the email message clicks on the URL
+- Mirror Page and Unsubscription links aren't tracked, but generate a *Mirror Page* click and an *Unsubscribed* click.
+
+### Tracked Results
+- Tracking results are available in the tracking logs of a sent delivery
+- They are also available in reports provided out of the box, such as
+  - Delivery Summary
+  - URLs and click streams
+  - Tracking Indicators
+  - Hot clicks
+<!--BREAK AT ACS: Inserting Links into Email Content (2:19 Mark)-->
