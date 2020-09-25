@@ -412,4 +412,23 @@ Define Different content to display dynamically based on a condition - for examp
 - Calculates the target population
 - Generates the message contents for each profile in the target (personalization)
 
+### A/B Testing
+- A/B Testing is available out of the box in Campaign Standard
+- You can define two or three email variants to test.
+- To determine which has the best result, each variant is sent to population samples
+- The winning variant is sent to the remaining population
+- Three types of A/B tests supported are:
+  - Sender
+  - Content
+  - Subject
 
+### Process of Creating an A/B Test
+- (1) Create Email Delivery
+- (2) Select A/B Type**
+- (3) Set Properties**
+- (4) Specify Audience**
+- (5) Define A/B test Parameters**
+- (6) Design Content**
+- (7) Prepare & Send
+
+> **Guided by the email creation wizard
