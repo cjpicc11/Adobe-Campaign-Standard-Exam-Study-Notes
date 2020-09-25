@@ -385,4 +385,31 @@ Define Different content to display dynamically based on a condition - for examp
   - URLs and click streams
   - Tracking Indicators
   - Hot clicks
-<!--BREAK AT ACS: Inserting Links into Email Content (2:19 Mark)-->
+
+### Steps for Sending an Email
+- (1) Preview Email
+  - Preview the design
+  - Review anti-spam analysis
+  - Edit email if required
+- (2) Send Proof
+  - Send a proof to validate
+  - Edit email if required
+  - Obtain approval of the final email design
+- (3) Prepare Delivery
+  - Review preparation results
+  - Correct errors, if applicable, and restart preparation
+- (4) Confirm Delivery
+  - Confirm the sending of the delivery
+- (5) Review Deployment Results
+  - Review KPI's
+  - Review message logs
+
+### Prepare Delivery
+- Applies Typology rules
+  - Filtering rules
+  - Control rules
+  - Fatigue management rules
+- Calculates the target population
+- Generates the message contents for each profile in the target (personalization)
+
+
