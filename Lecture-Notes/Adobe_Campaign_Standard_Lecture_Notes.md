@@ -439,3 +439,64 @@ To create an A/B test, you can create an email delivery from:
 - The Marketing Activities page
 - A campaign
 - A workflow (single-send and recurring deliveries)
+
+#### Step 2:  Select A/B Type
+Templates are provided for each type of A/B test:
+- A/B test on sender
+- A/B test on content
+- A/B test on subject
+
+#### Step 3:  Set Properties
+Set the email properties:
+- Label
+- ID
+- Campaign
+- Description
+
+#### Step 4:  Specify Audience
+To specify the email's target audience:
+- Define conditions to select the profiles to be targeted
+- Specify test profiles to use for sending proofs
+
+#### Step 5:  Define A/B Test Parameters
+**Number of variants**
+- Two or three variants
+- If you choose three, you can't change the two later
+**Winning Strategy**
+- Criterion to determine winning variant
+- Best open rate
+- Best click-through rate
+- Weakest unsubscribe rate
+**Target breakdown**
+- The percentage of the target audience to receive each variant
+- It can be calculated automatically or manually
+- The percentage is the same for each variant
+- The remaining percentage receives the winning variant
+- The profiles targeted by a variant are randomly chosen.
+**Winner sending method**
+- Send automatically, or send after confirmation
+- Send after confirmation requires that you manually select the winning variant
+**Test duration**
+- The winning variant is determined automatically after this duration
+- Must be at least one hour
+**Winner sending method**
+- Send automatically, or send after confirmation
+- Send after confirmation requires that you manually select the winning variant
+**Test duration**
+- The winning variant is determined automatically after this duration
+- Must be at least one hour
+
+#### Step 6:  Design Content
+- You'll use the Email Designer to design the content of your email messages
+- You need to configure multiple variants of the element being tested (sender, subject, or content)
+
+#### Step 7:  Prepare and Send
+- Modify the A/B test parameters, except
+  - The type of A/B test (sender, content, subject)
+  - The number of variants, if you chose three A/B/C variants.
+- Preview, send a proof, prepare and send the delivery
+- Select the winning variant:
+  - If you chose to manually confirm the winner
+  - In the case of a tie
+  - At any time to reduce the test duration
+
