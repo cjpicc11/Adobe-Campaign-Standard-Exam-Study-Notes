@@ -461,27 +461,27 @@ To specify the email's target audience:
 #### Step 5:  Define A/B Test Parameters
 **Number of variants**
 - Two or three variants
-- If you choose three, you can't change the two later
+- If you choose three, you can't change the two later  
 **Winning Strategy**
 - Criterion to determine winning variant
 - Best open rate
 - Best click-through rate
-- Weakest unsubscribe rate
+- Weakest unsubscribe rate  
 **Target breakdown**
 - The percentage of the target audience to receive each variant
 - It can be calculated automatically or manually
 - The percentage is the same for each variant
 - The remaining percentage receives the winning variant
-- The profiles targeted by a variant are randomly chosen.
+- The profiles targeted by a variant are randomly chosen.  
 **Winner sending method**
 - Send automatically, or send after confirmation
-- Send after confirmation requires that you manually select the winning variant
+- Send after confirmation requires that you manually select the winning variant  
 **Test duration**
 - The winning variant is determined automatically after this duration
-- Must be at least one hour
+- Must be at least one hour  
 **Winner sending method**
 - Send automatically, or send after confirmation
-- Send after confirmation requires that you manually select the winning variant
+- Send after confirmation requires that you manually select the winning variant  
 **Test duration**
 - The winning variant is determined automatically after this duration
 - Must be at least one hour
