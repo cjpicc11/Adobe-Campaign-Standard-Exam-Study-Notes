@@ -432,3 +432,10 @@ Define Different content to display dynamically based on a condition - for examp
 - (7) Prepare & Send
 
 > **Guided by the email creation wizard
+
+#### Step 1:  Create Email Delivery
+To create an A/B test, you can create an email delivery from:
+- The home page
+- The Marketing Activities page
+- A campaign
+- A workflow (single-send and recurring deliveries)
