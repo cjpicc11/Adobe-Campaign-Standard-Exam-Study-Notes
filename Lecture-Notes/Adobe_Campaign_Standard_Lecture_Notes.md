@@ -95,7 +95,7 @@ The Traps feature lets you target additional profiles that do not match the defi
 **You can use Traps to:**
 - Detect Illegal use and distribution of profile data.
         - More commonly used with Direct Mail deliveries
-        - Recommended when you are using an external service provider for campaign fulfilment
+        - Recommended when you are using an external service provider for campaign fulfillment
 - Ensure deliveries are receive by profiles
 - Send a copy of the delivery to management.
 
@@ -262,7 +262,7 @@ You can use the Email Designer to design:
   - By importing content from a URL (Import from a URL)
 
   ### Creating Content from a Template
-  - Current Templates are provided out of the box (for example, customer welcome emails, newsletters, and reengagement emails)
+  - Current Templates are provided out of the box (for example, customer welcome emails, newsletters, and re-engagement emails)
   - The layouts are optimized for mobile.
   - The templates are read-only.
   - You can create custom content templates.
@@ -367,7 +367,7 @@ Define Different content to display dynamically based on a condition - for examp
   - External link
   - Landing page
   - Subscription link
-  - Unsubscription link
+  - Unsubscribe link
 - You can also personalize links by inserting personalization fields, content blocks, or dynamic content.
 
 ### Tracked URLs
@@ -376,7 +376,7 @@ Define Different content to display dynamically based on a condition - for examp
   - Is activated by default in the email properties
   - Can be activated or deactivated for each URL
 - Tracked URLs generate a *Click* when a recipient of the email message clicks on the URL
-- Mirror Page and Unsubscription links aren't tracked, but generate a *Mirror Page* click and an *Unsubscribed* click.
+- Mirror Page and Unsubscribe links aren't tracked, but generate a *Mirror Page* click and an *Unsubscribed* click.
 
 ### Tracked Results
 - Tracking results are available in the tracking logs of a sent delivery
@@ -511,4 +511,339 @@ To specify the email's target audience:
   - If you chose to manually confirm the winner
   - In the case of a tie
   - At any time to reduce the test duration
+
+## Reporting in Adobe Campaign Standard
+
+### Reports Available in ACS
+The data in ACS reports is derived from the broad logs and the tracking logs in the Adobe Campaign database.  Here are the out-of-the-box reports available in ACS:
+
+#### Dynamic Reports
+- Bounce summary
+- Breakdown by domains
+- Complaints
+- Delivery summary
+- Delivery throughput
+- Non-deliverables and bounces
+- Opens
+- Push Notification report
+- SMS report
+- Tracking indicators
+- Unsubscriptions
+- URLs and Clicks streams
+
+#### Other Reports
+- Service Summary
+- Email rendering
+- Hot clicks
+- Fatigue Rules Summary
+
+### Accessing Reports in ACS
+ACS provides reports at the program, campaign, delivery, and instance (or account) levels.
+
+### Reporting Period for Dynamic Reports
+You need to validate, modify if required, the reporting time period when viewing dynamic reports.  
+
+The reporting time period defaults to the following values:  
+- Program/Campaign: Start date to the end date of the program/campaign
+- Delivery:  Sent date to send date plus seven days
+- Campaign instance:  Last 30 days.  
+
+You can modify the reporting period if required.  
+
+### Sharing Dynamic Reports
+You can share reports with Adobe Campaign users by choosing one of the following options:  
+- Send report now
+- Send report on schedule  
+The targeted users will receive an email with PDF as an attachment.  
+You can also:  
+- Download the report data in CSV format; or
+- Print the report
+
+### Dynamic Reports
+Dynamic reports is a flexible freeform environment to explore delivery data.  It provides the ability to:  
+- Run real-time reporting
+- Create ad-hoc reports
+
+Here's what you can do with functional out-of-the-box reports:
+- Monitor deliveries, campaigns, and programs
+- Measure the impact of deliveries on profiles
+- Use them as a template to build custom reports
+
+The dynamic reports workspace has:
+- Flexible drag-and-drop menus
+- Customizable visualizations
+
+#### Structure of a Dynamic Report
+Panel:
+- It's a canvas to design a report
+- It's a collection to freeform tables and visualizations
+- It filters data for one time period
+
+Freeform Table contains a data set
+Components:
+- Are columns and rows of the freeform table
+- They contain dimensions, metrics, segments, and time
+
+Visualization is the graphical representation of the data set.
+
+#### Structure of a Freeform Table
+All the components available to build a Freeform Table are specific to delivery data within ACS.
+
+Dimensions are:
+- Data types targeted for analysis
+- Rows/line items in the freeform table
+
+Metrics are:
+- Measurements of the status of a message
+- Columns in the freeform table
+
+The available dimensions and metrics are from broad logs and tracking logs.
+
+#### Segments and Time Components
+Segments:
+- Add an age range filter on the data in a panel
+- Examples: Generation X, From 18 to 25, From 26 to 30
+
+Time:
+- Adds a time-parting dimension to breakdown the data
+- Examples: Day, Hour, Month, Quarter
+
+### Customizing Dynamic Reports
+
+#### Creating a Dynamic Report
+There are two ways to create a custom dynamic report.  You can:
+- Customize an out-of-the-box report and save the changes to a new custom report
+- Use the Create New Project option
+
+The custom reports have a blue icon on the ACS reports interface.
+
+### Creating Dynamic Reports
+#### Use Case:  Create a Dynamic Report
+Create a report for all campaigns in the instance over the last six months, and report on sent, delivered, unique opens, and unique clicks.
+
+
+### Direct Mail in ACS
+- Direct mail is an offline channel in ACS that allows you to generate a file required by direct mail providers.
+- A direct mail delivery generates a file of all the targeted profiles with their contact information
+- You can customize the contact information included in the file
+- The marketer can then send the file to their direct mail provider who will take care of sending the delivery.
+
+#### Creating a Direct Mail Delivery
+- You can create direct mail deliveries from:
+  - The home page
+  - The Marketing Activities page
+  - A campaign
+  - A workflow
+- A direct mail creation wizard provides a guided process to create a direct mail delivery
+- Direct mail types:
+  - Single-send: direct mail deliveries are sent once.
+  - Recurring:  direct mail deliveries are sent multiple times (available only within a workflow)
+
+#### Planning for Direct Mail Campaigns
+Step 1:  Identify direct mail provider's requirements:
+- Naming convention for the file
+- Structure of the file
+  - Output format for the file, such as the file type (text, csv)
+  - Format of the data (data, numbers)
+  - Headers and/or footer
+- Extracted data:
+  - Profile information to be included and the order of the data columns
+  - Sort order of the data
+- File transferring method
+
+Step 2:  Configure profiles for direct mail targeting
+- Address fields must contain the full mailing address
+- Address specified field must be checked
+  - A typology rule will exclude the profile if this field is not checked
+- These requirements also apply to test profiles used for sending a test, or as a trap
+
+Step 3:  Assign EXPORT role to the user creating direct mail deliveries
+  - A user requires the EXPORT role to export the file
+  - An ACS administrator can assign the role to a user
+
+#### Direct Mail Creation Process
+- Select Type**
+- Set Properties**
+- Specify Audience**
+- Define the Content**
+- Prepare & Send
+- Transfer the file
+
+> ** Guided by the direct mail creation wizard
+
+#### Select Type
+- Select the direct mail type-they are direct mail templates
+  - ACS provides templates out of the box
+  - You can also create custom templates
+
+#### Set Properties
+- Set the direct mail properties
+  - Label
+  - ID
+  - Campaign
+  - Description
+
+#### Specify Audience
+- Specify the direct mail delivery's audience
+- Specify test profiles to use for sending proofs and inserting traps (seeds)
+
+#### Define the Content
+- Define the content:
+  - Extraction: file name, output columns
+  - File structure: output, date, and number formats
+  - Header and Footer: information included at the beginning or at the end of the extraction file.
+
+#### Prepare and Send
+- Configure the schedule
+- Configure/edit properties, audience, content
+- Send test to verify the extraction file
+- Prepare the delivery
+  - Applies typology rules
+  - Analyzes the target
+  - Confirm the delivery
+
+#### Transfer the file
+- Once the extraction file is generated, you can send it to the direct mail provider
+- There are various options for sending the extraction file:
+  - Via regular email, with the file attached
+  - Via a Campaign workflow, using a Transfer file activity
+  - Uploading manually to a shared drive such as FTP or an Amazon S3 bucket.
+
+
+### SMS Campaigns
+Adobe Campaign allows you to deliver SMS (Short Message Service) messages.
+- You can include dynamic text and personalization in the messages
+- The length of an SMS message is:
+  - 160 characters for GSM encoding
+  - 70 characters for Unicode encoding 
+
+#### SMS Delivery
+- SMS delivery types:
+  - Single-send:  SMS delivery is sent once
+  - Recurring:  SMS delivery is sent multiple times to different targets (available only within a workflow)
+  - An SMS creation wizard guides the process to create the SMS delivery
+
+#### Planning for SMS Campaigns
+To deliver SMS messages, you need:
+- An external account for the Mobile (SMS) channel
+- A delivery template linked to the external account
+  - Profile records with mobile numbers
+
+#### SMS Creation Process
+1. Create SMS Delivery
+2. Select Type**
+3. Set Properties**
+4. Specify Audience**
+5. Design the Content**
+6. Prepare and Send
+
+> ** Guided by the SMS creation wizard
+
+#### Step 1:  Create SMS Delivery
+- You can create SMS deliveries from
+  - The Home page
+  - The Marketing Activities page
+  - A campaign
+  - A Workflow
+
+#### Step 2:  Select Type
+- Select the SMS type/template
+  - ACS provides templates out-of-the-box
+  - You can also create custom templates
+
+#### Step 3:  Set Properties
+- Set the SMS properties:
+  - Label
+  - ID
+  - Campaign
+  - Description
+
+#### Step 4:  Specify Audience
+- Specify the SMS delivery's audience
+- Specify test profiles to use for sending proofs
+
+#### Step 5:  Design the Content
+- Design the content of the message
+- Add personalization, content blocks and dynamic text.
+- Preview the message to test personalization, content blocks and dynamic text
+
+#### Step 6:  Prepare and Send
+- Configure/edit properties, schedule, audience, and content
+- Send tests to verify the message
+- Prepare the delivery
+  - Applies typology rules
+  - Analyzes the target
+  - Inserts personalization
+- Send the message
+
+
+### Multilingual Campaigns
+#### Benefits
+- Create multilingual content in a unified solutions
+- Create one delivery for multiple languages
+- Scale multilingual campaigns across Email, Push, and SMS channels
+- Report on effectiveness of delivery across all languages
+
+#### Multilingual Campaigns in ACS
+- Campaigns are available for email, SMS, and push notifications.
+- Out-of-the-box multilingual templates provide ability to specify multiple languages
+- An existing delivery can be converted to multilingual
+- Each language supported is declared using a variant
+- Content is designed for each variant
+- Profiles are sent the variant that matches their preferred language
+- If preferred language is not specified, the profile receives the default variant/language
+
+#### Process or Creating Multilingual Deliveries
+1. Create Delivery
+2. Select Type**
+3. Set Properties**
+4. Specify Audience**
+5. Specify Variants**
+6. Design Content
+7. Prepare and Send
+
+> ** Guided by the delivery creation wizard
+
+#### Create Delivery
+- You can create the deliveries from
+  - The Home page
+  - The Marketing activities page
+  - A campaign
+  - A workflow
+
+#### Select Type
+- Select the multilingual template:
+  - ACS provides out-of-the-box multilingual template for each type of delivery
+  - You can also create custom multilingual templates
+
+#### Set Properties
+- Set the delivery properties:
+  - Label
+  - ID
+  - Campaign
+  - Description
+
+#### Specify Audience
+- Specify the audience for the delivery
+- Specify test profiles to use for sending proofs
+
+#### Specify Variants
+- Add a content variant for each supported language
+- Set the default variant
+
+#### Design Content
+- Design content for each variant
+- For email, subject, and sender name can be defined for each variant as well
+- Preview the content
+
+#### Prepare and Send
+- Add/remove variants
+- Configure/edit properties, schedule, audience
+- Send tests to verify the message
+- Prepare the delivery
+- Send the message
+
+
+
+
 
