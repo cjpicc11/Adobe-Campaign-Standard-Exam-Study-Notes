@@ -843,7 +843,139 @@ To deliver SMS messages, you need:
 - Prepare the delivery
 - Send the message
 
+### Landing Pages
+- Online forms to:
+  - Capture profile information
+  - Manage subscriptions to a service
+  - Display data
+  - Acquire or update existing profiles
+- Hosted on Adobe Campaign Standard
+- Accessible in a browser by:
+  - Providing a link to the landing page in an email
+  - Incorporating a link to the landing page within a website.
+
+#### Types of Landing Pages
+ACS supports the following types of landing pages:
+- **Profile acquisition:**  Creates a new profile, or modifies an existing profile
+- **Blacklist (global):** Allows a profile to opt out from all deliveries
+- **Subscription:** Allows a profile to subscribe to a service
+- **Unsubscription:** Allows a profile to unsubscribe from a service
+
+#### Life Cycle of a Landing Page
+The lifecycle of a landing page is as follows:
+- **Creation/Editing:** Create and edit the content design of the landing page.
+- **Test:** Simulate the landing page execution on a profile
+- **Publication:** Publish the landing page to push it live
+- **Expiration/Depublication:** Unpublish manually or wait for the landing page to expire
+
+#### Landing Pages Templates
+Out-of-the-box templates are configured specifically to support the four use cases in Adobe Campaign Standard.  
+You an create landing pages using one of the templates:
+- **Profile Acquisition:** Creates a new profile, or updates an existing profile
+- **Blacklist (global):** Allows a profile to opt out from all deliveries
+- **Subscription:**
+  - Subscribes a profile to a service
+  - Creates a new profile, if visitor doesn't exist in ACS
+  - Updates an existing profile if data in the form is modified.
+- **Unsubscription:** Unsubscribes a profile from a service
+
+#### Landing Page Structure
+The structure consists of three pages:
+- Main landing page
+- Confirmation page
+- Error page
+
+To configure a landing page, you need to:
+- Configure the properties of the landing page
+- Design the content of each page
+
+Developers can create custom landing page templates with custom configuration and design requirements.
+
+#### linking Landing pages to a Service
+You can link a landing page to a service:
+- Subscription/Unsubscription require a link to a service
+- Profile acquisition can link to a service
+
+Select the service using one of these options:
+- Specific service - Select an existing service
+- Service from the URL - service is selected when you insert a link to the landing page in an email delivery
+
+#### Editing the Design of a Landing Page
+The following demonstration covers the following topics:
+- Switching pages
+- Duplicating content
+- Mapping form fields
+- Editing fields
+  - Mandatory
+  - Type of field
+  - Style
+  - Format
+  - Labels
 
 
 
+#### Confirmation Messages
+You can send confirmation messages from a landing page, as well as a service.  By default:
+- Landing pages **do not** send confirmation messages
+- Services send confirmation messages
+
+If a landing page **is not** linked to a service, you might want to enable the sending of confirmation messages - for example, with the profile acquisition use case.
+
+Sending these messages requires a transactional message template.
+
+If a landing page is linked to a service, enable messages only if the linked service is not sending confirmation messages.
+
+### Services
+- Create and manage newsletters and cross-channel communications
+- Can only send messages to profiles who are subscribed to the service
+- Each service comes with:
+  - Subscription (opt in) and unsubscription (opt out) mechanisms
+  - Subscription and/or unsubscription confirmation mechanisms
+  - Subscription history
+
+#### Properties of a Service
+| Properties | Purpose | Options |
+| --- | --- | --- | 
+| Service Label | Displays the service name in confirmation emails and landing pages | Not available
+| Subscriptions with an expiration date | Sets the validity period for the service | Number of years, months, days, hours, minutes | 
+| Confirmation Messages | Sends a transaction message to profiles to confirm service subscription/unsubscription |   No Message, Default message, Custom Message | 
+| Default subscription/unsubscription landing pages | Sets the landing page used by profiles to subscribe/unsubscribe to a service | Out-of-the-box landing pages, Custom landing pages, Leave blank (no landing pages) - requires the use of a landing page configured with "Service from the URL"
+
+
+#### Out-of-the-Box Newsletter Service Template
+- The Newsletter service template is available out of the box.
+- You can use it to create a new service
+- Default configuration uses:
+  - The default messages for subscription/unsubscription confirmations
+  - Out-of-the-box subscription and unsubscription landing pages
+- Developers can create custom service templates
+
+#### Sending Confirmation Messages
+Services are configured by default to send confirmation messages.  You can configure landing pages to send confirmation messages:
+- By default, landing pages do not send confirmation messages
+- You need to send confirmation messages from the landing page only if the service is configured with option No Message.
+
+### Manage Subscriptions
+- You can automatically subscribe profiles to a service using the *Subscription services* activity in a workflow
+- Subscriptions to a service can also be managed by an organization's customers
+- To allow customers to manage their subscription to a service, you must promote the service
+- You can promote the services in emails and on organization's website
+
+#### Promoting a Service
+You can promote a service in the following ways:
+|Where?|How?|What happens?|
+|---|---|---|
+|Email|Subscription or unsubscription link|(1) Links to the service (2) Displays the service's default landing pages|
+|Email|Landing page link|(1) Displays the landing page (2) Links to service associated to the landing page or selected in the email link.|
+|Website|Public URL of a landing page|(1) Displays the landing page (2) Links to the service associated to the landing page or specified in the URL parameters|
+
+### Monitoring Subscriptions
+Monitor subscriptions to a service using
+- The Service Dashboard
+  - Subscriptions
+  - Subscription History
+- The Profile Record
+  - Event List
+  - Properties - Subscriptions tab
+- The Service Summary Report
 
