@@ -111,7 +111,7 @@ Every custom resource must have at least one unique identification key.  Its pur
 
 #### Publication Options
 Two modification options:
-- Determin modifications since last publication
+- Determine modifications since last publication
   - This will publish changes in ALL custom resources
   - Excludes custom resources with "Do not publish latest modifications" selected
 
@@ -270,3 +270,24 @@ Test Profiles
     </srcSchema>
 
 ```
+
+#### Attribute Element
+``` html
+    <attribute category="99_none" default="0" label="Price" mandatory="false" name="price" type="float"/>
+```
+- Properties of the field are defined in the `<attribute/>` tag
+- Properties of this attribute:
+  - category="00_none":  Query editor category in which to display this attribute is *none;* field will not be available in QUery Editor
+  - default="0": default value of "0"
+  - label="Price": field label when displayed in the application
+  - mandatory="false": field is not mandatory
+  - name="price": field ID is "price"
+  - type="float": data type is a "float"
+
+  #### Other Elements
+  - `<element/>`
+  - `<dbindex/>`
+  - `<key/>`
+  - `<keyfield/>`
+  - `<enumeration/>`
+
