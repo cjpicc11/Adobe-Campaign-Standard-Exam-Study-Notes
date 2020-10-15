@@ -14,7 +14,7 @@
 - Import and export data packages accessible by Administrators **only**
 
 #### Data Package Contents
-**THe purpose of a data package is to deploy configurations.**
+**The purpose of a data package is to deploy configurations.**
 - Data packages are not business data such as profiles and transaction data; this data is imported using workflows
 - Data packages can contain technical and business configurations:
   - Technical configurations: custom resource definitions, system options, etc.
@@ -59,3 +59,17 @@ Exporting entities linked by n-n link:
   - Allows for easier identification of objects
     - Ex: ID for deliveries: demACME_Sept_ReengagmentWave1
 
+
+### Deploying Data Packages:  Templates
+
+#### Process for Deploying a package:
+1. Define export package in the source environment
+2. Export package
+3. Define import in the target environment
+4. Import package
+
+> *Note: Custom resources must be published after being imported; importing does not apply changes to the database.*
+
+### Deploying Data Packages:  Custom Resources
+
+> This module was all demo.  No notes to take.
