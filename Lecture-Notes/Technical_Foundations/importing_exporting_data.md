@@ -40,3 +40,171 @@ Six related activities to configure importing and exporting data.
    - Perform a mass update of data in the Adobe Campaign database
 6. **Subscription Services**
    - Subscribe, or unsubscribe, a mass list of profiles to a service
+
+### Exporting Data from a List View
+- You can only export columns that are available from the list view.
+- Export is limited to 100,000 records.
+
+### Exporting Data Using a Workflow
+**Minimum workflow activity requirements when exporting data using a workflow:**
+- Query
+- Extract file
+- Transfer file
+
+#### Extract File Activity
+Allows you to export data from Adobe Campaign in the form of a file
+- Must be placed after a query activity
+
+To access the extracted file in the workflow, use a Transfer file activity to retrieve the file from the external location.
+
+Configure:
+- Columns to include in the file
+- Structure of the extract file
+
+#### Transfer File Activity
+Transfer File activity allows you to do the following:
+- Receive and send files
+- Test to determine if there are files present
+- List files present in an external location
+
+When used to download a data file from an external location, a Load file activity typically follows the Transfer file in the workflow to structure the data file.
+
+Configure:
+- Action (ex: file upload, file download)
+- Protocol (ex: SFTP, Amazon S3)
+- Connection parameters
+
+### Import Templates
+An import template provides a simplified import function that allows users to manage imports.
+- Advanced users create and configure the Import Template
+- Marketers use the simplified Import Template view to import data.
+
+#### Steps to Create an Import Template
+Here are the steps to follow to create a new Custom Import template
+1. Duplicate Import Template
+2. Upload Sample Data File
+3. Customize Workflow
+4. Set Template to Available
+
+#### Out-of-the-box Import Templates
+Adobe Campaign includes two out-of-the-box templates.
+- Use them to create custom import templates
+- Don't modify out-of-the-box templates; duplicate them
+
+Custom import templates are available only to the marketer, under *Profiles & Audiences > Imports*
+
+Two out-of-the-box templates are provided.
+1. Import Data (simplifiedImport)
+  - Imports Profile Data
+2. Import an audience (simplifiedImportWithAudience)
+  - Imports profile data and saves to an audience
+
+
+#### Sample Data File
+When configuring the properties of an Import Template...
+- Must provide a sample data file to identify the structure of the imported file
+- Must be flat file only (.txt, .csv)
+- Actual sample file is available to the marketer when using the import template
+
+Note:  Data contained in the Sample file is imported when testing the workflow.
+- File should contain very little data
+- Data should be fictitious
+
+#### Customize Workflow
+An Import Template's default workflow must be customized to meet the custom data requirements.
+- If required:  Add additional activities
+- Limitation:  Can only import a single file
+
+### Customize Workflow:  Customize Load File Activity
+
+#### Load File Activity
+Allows import of data from a file to use in a workflow.
+- Data is imported temporarily
+- the activity uploads data to the database
+
+#### Load File Activity:  Configuration
+There are five main elements to configure.
+1. Sample Data File
+  - Must provide a sample data file
+  - Flat structure files (.txt, .csv)
+  - File with little data is recommended
+  - Import template sample file is used
+  - ** Column format is detected
+  - ** Default data type and default properties assigned to each column 
+
+    > ** NOTE: When the sample file is loaded
+2. File to load
+  - From inbound transition or from local machine
+  - Import template: file selected by the marketer when using the import template
+3. Reject Management
+  - Creates file of rejected records
+  - Configure workflow to retrieve the file
+  - Import template provides functionality to access the file.
+4. File Format
+  - Confirm the File Structure is correctly detected; if not, modify file format accordingly
+5. Column definition
+  - Confirm the columns to load
+  - Modify the column parameters to match the target data
+  - Remap values for enumerations
+
+
+### Customize Workflow:  Configure Update Data Activity
+
+#### Update Data Activity
+This activity allows you to perform mass updates of data in Adobe Campaign's database.  
+
+There are three main elements to configure:
+1. Operation type
+  - Database insert, update, or delete
+2. Data Identification
+  - Dimension to update (profiles, transactions)
+  - Reconciliation method
+3. Fields to update
+
+### Customize Workflow:  Configure the Save Audience Activity
+
+#### Save Audience Activity
+Save Audience is a Targeting activity.  It allows the creation or update of an audience from the population-computed upstream in a workflow.
+- Creates list or file audiences
+- Configure
+  - Action
+    - Create a new audience or updating an existing audience
+    - Share audience in Adobe Marketing Cloud, if available
+  - Update type, if applicable
+    - Replace existing audience or add new records to the existing audience
+
+### Importing Profiles
+
+#### Steps to Create an Import Template
+Provides a simplified interface to marketers for importing profiles
+1. Create a new import
+2. Select import template
+3. Upload data file
+4. Start import
+
+### Importing Data Using a Workflow
+
+**Import Transactions Workflow:**
+  - Import data from an external file into the Campaign database
+**Advanced user:**
+  - Configures and executes the workflow
+  - Creates a workflow in Marketing or within a Program/Campaign
+
+#### Reconciliation Activity
+
+**Reconciliation activities serve two purposes.**
+1. Identify link to source data
+  - Only the Reconciliation activity can link source data
+  - If source data contains a column that is a link to another data dimension, the link must be identified
+2. Reconcile source data with existing records
+  - If additional processing of the source data in the workflow is required, prior to updating the database
+  - If source data requires no processing, reconciliation can happen directly in the Update Data activity
+
+#### Reconciliation Configuration
+**There are two main elements to configure:**
+1. Relations
+  - Identify links to other data dimensions
+  - Identify criteria to reconcile with the other data dimension
+2. Identification
+  - Identify the data dimension of the source data
+  - Identify criteria to reconcile the records.

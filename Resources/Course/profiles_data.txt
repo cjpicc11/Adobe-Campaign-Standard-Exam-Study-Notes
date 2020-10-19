@@ -1,0 +1,3 @@
+First name;Last name;Email;Gender;Date of birth;Age
+Arlie;Richardson;arlie.richardson@gmail.com;female;10/15/1986;20
+Barton;Richardson;barton.richardson@pepsico.com;male;11/19/1980;36;89809
