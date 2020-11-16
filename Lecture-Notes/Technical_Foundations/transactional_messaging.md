@@ -78,3 +78,54 @@ To buffer transactional message requests:
 
 To stop sending transactional messages:
 1. Unpublish the template
+
+## Making an Event API Call
+
+### Event Status
+- pending - Event has just been triggered
+- processing - Event has been transformed into a message and message has been sent.
+- processed - When message has successfully been sent.
+
+#### Failure Modes
+- routingFailed - Event Type is unknown (API is not available)
+- ignored - Email address is in quarantine for example
+- deliveryFailure - Error in delivery content
+- tooOld - Event can expire before it is processed
+
+### Message Center User Accounts
+- Message Center Agent:  Is used to execute the transactional deliveries
+- Message Center Push Agent:  Is used to authorize API requests.
+
+## Reporting and Monitoring
+This module is mostly a demo.
+
+## Troubleshooting Transactional Messaging
+This module is mostly a demo.
+
+## Sending a Follow-up Message
+
+### Follow-up Messages
+- This type of message provides a second chance to reach the recipient with important information
+- In accordance with the original message, follow-up messages:
+  - Are sent via the same channel
+  - Generate event delivery and tracking logs or profile delivery and tracking logs.
+
+### Generating a Follow-up Message Template
+- Activate the checkbox
+- Add subject line and body
+
+### Workflow to Send Follow-up Messages
+- Identify recipients who did not open the transactional message
+- Schedule workflow execution (not shown)
+- Use a recurring delivery
+
+## Triggering a Transactional Message
+
+### Adobe Marketing Cloud Triggers
+Adobe Marketing Cloud triggers are part of the Activation core service.  Here's the way they work:
+
+1. User visits the web site
+2. When conditions are met, a trigger fires
+3. Adobe Campaign sends a transactional message
+
+### The rest of module is a demo
